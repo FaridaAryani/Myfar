@@ -1,0 +1,80 @@
+/* Reset some default browser styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Menghilangkan margin, padding, dan bullet points default pada ul dan li */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex; /* Menggunakan Flexbox untuk tata letak yang fleksibel */
+    justify-content: space-between; /* Menyebar elemen anak dengan jarak yang sama di antara mereka */
+    align-items: center; /* Menyelaraskan elemen anak secara vertikal di tengah */
+    padding: 10px 20px; /* Menambahkan padding di dalam navbar */
+    background-color: #333; /* Memberikan warna latar belakang abu-abu gelap */
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex; /* Menggunakan Flexbox untuk menampilkan item secara horizontal */
+    gap: 20px; /* Menambahkan jarak 20px antara item navigasi */
+}
+
+.nav-links li {
+    padding: 5px; /* Menambahkan padding 5px pada setiap item navigasi */
+}
+
+.nav-links a {
+    color: white; /* Mengatur warna teks link menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah default pada link */
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah pada link saat di-hover */
+}
+
+/* Centered and Rounded Image Styling */
+.banner-img-wp {
+    display: flex; /* Menggunakan Flexbox untuk tata letak yang fleksibel */
+    justify-content: center; /* Menyelaraskan elemen anak secara horizontal di tengah */
+    align-items: center; /* Menyelaraskan elemen anak secara vertikal di tengah */
+    margin-top: 40px; /* Menambahkan margin di atas elemen banner */
+    margin-bottom: 40px;
+}
+
+/* Footer styles */
+.site-footer {
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.top-footer {
+    background-color: #333;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.social-media a:hover {
+    color: #ffcc00; /* Yellow color for hover */
+}
+
+.bottom-footer {
+    background-color: #1d1616;
+    padding: 20px 0;
+}
+
+.bottom-footer p {
+    margin: 0;
+    color: #fff;
+}
+
+.site-footer .bottom-footer .name {
+    font-weight: bold;
+}

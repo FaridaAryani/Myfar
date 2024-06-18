@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farida's Website</title>
+    <link rel="stylesheet" href="assets/css/projectstyles.css">
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4K2XFY83a3/d4W85l4kuEDyS5b0F7DslBO5Opd7MIOxuFeDk44UJjvoBzPf5ecU8j+Es0j+b+CKpw3LkBLGt8w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/Image/aryni.png" width="80" height="80" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Galery.html">My Galery</a></li>
+            <li><a href="Project.html">My Project</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <form id="projectForm">
+        <label for="project">Pilih My Project:</label>
+        <select id="project" name="project">
+            <option value="tic-tac-toe">Tic Tac Toe</option>
+            <option value="scrap1">Scrap1</option>
+            <option value="scrap2">Scrap2</option>
+            <option value="scrap3">Scrap3</option>
+            <option value="tree">Pohon Keluarga</option>
+            <option value="MoneyTracker">Aplikasi Money Tracker</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <section id="tic-tac-toe" class="project">
+        <div class="game-container">
+            <h2>Game Tic Tac Toe</h2>
+            <p>Masukkan nama anda: </p>
+            <input type="text" id="name-input" placeholder="Nama Anda">
+            <div id="board" class="board">
+                <div class="cell" data-cell>1</div>
+                <div class="cell" data-cell>2</div>
+                <div class="cell" data-cell>3</div>
+                <div class="cell" data-cell>4</div>
+                <div class="cell" data-cell>5</div>
+                <div class="cell" data-cell>6</div>
+                <div class="cell" data-cell>7</div>
+                <div class="cell" data-cell>8</div>
+                <div class="cell" data-cell>9</div>
+            </div>
+            <p id="result" class="result"></p>
+            <button id="restartButton" class="restart-button">Restart Game</button>
+        </div>
+    </section>
+
+    <section id="scrap1" class="project">
+        <h2>Web Scraping Republika</h2>
+        <div id="DataScrapping_json" class="headline_json">
+            <h1> Tabel Data Scrapping </h1>
+            <div id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>No</td>
+                            <td>Judul</td>
+                            <td>Kategori</td>
+                            <td>Waktu Publikasi</td>
+                            <td>Waktu Pengambilan</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="scrap2" class="project">
+        <h2>Web Scraping MyAnimeList</h2>
+        <!-- Tugas Scraping kedua akan ditampilkan di sini -->
+    </section>
+
+    <section id="scrap3" class="project">
+        <h2>Web Scraping Tokopedia</h2>
+        <!-- Tugas Scraping ketiga akan ditampilkan di sini -->
+    </section>
+
+    <section id="tree" class="project">
+        <h2>Representasi Pohon Keluarga Menggunakan Struktur Data Tree</h2>
+        <!-- Tugas Pohon keluarga akan ditampilkan di sini -->
+    </section>
+
+    <section id="MoneyTracker" class="project">
+        <h2>Aplikasi MoneyTracker</h2>
+        <!-- Tugas Money Tracker akan ditampilkan di sini -->
+    </section>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="assets/js/scripts.js"></script>
+
+    <footer class="site-footer">
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Copyright &copy; 2024 <span class="name">TechnoMy.</span> All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>

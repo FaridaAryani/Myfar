@@ -1,0 +1,97 @@
+/* Reset some default browser styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Menghilangkan margin, padding, dan bullet points default pada ul dan li */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex; /* Menggunakan Flexbox untuk tata letak yang fleksibel */
+    justify-content: space-between; /* Menyebar elemen anak dengan jarak yang sama di antara mereka */
+    align-items: center; /* Menyelaraskan elemen anak secara vertikal di tengah */
+    padding: 10px 20px; /* Menambahkan padding di dalam navbar */
+    background-color: #333; /* Memberikan warna latar belakang abu-abu gelap */
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex; /* Menggunakan Flexbox untuk menampilkan item secara horizontal */
+    gap: 20px; /* Menambahkan jarak 20px antara item navigasi */
+}
+
+.nav-links li {
+    padding: 5px; /* Menambahkan padding 5px pada setiap item navigasi */
+}
+
+.nav-links a {
+    color: white; /* Mengatur warna teks link menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah default pada link */
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah pada link saat di-hover */
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-slide.active {
+    opacity: 1;
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.image-slide.active .image-description {
+    opacity: 1;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.site-footer .bottom-footer {
+    text-align: center;
+}
+
+.site-footer .bottom-footer p {
+    margin-bottom: 5px;
+}
+
+.site-footer .bottom-footer .name {
+    font-weight: bold;
+}

@@ -1,0 +1,161 @@
+/* Reset some default browser styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Menghilangkan margin, padding, dan bullet points default pada ul dan li */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex; /* Menggunakan Flexbox untuk tata letak yang fleksibel */
+    justify-content: space-between; /* Menyebar elemen anak dengan jarak yang sama di antara mereka */
+    align-items: center; /* Menyelaraskan elemen anak secara vertikal di tengah */
+    padding: 10px 20px; /* Menambahkan padding di dalam navbar */
+    background-color: #333; /* Memberikan warna latar belakang abu-abu gelap */
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex; /* Menggunakan Flexbox untuk menampilkan item secara horizontal */
+    gap: 20px; /* Menambahkan jarak 20px antara item navigasi */
+}
+
+.nav-links li {
+    padding: 5px; /* Menambahkan padding 5px pada setiap item navigasi */
+}
+
+.nav-links a {
+    color: white; /* Mengatur warna teks link menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah default pada link */
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah pada link saat di-hover */
+}
+
+.project {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.cell.x {
+    color: #ff0000;
+}
+
+.cell.o {
+    color: #0000ff;
+}
+
+.result {
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS untuk gaya tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+  
+table, th, td {
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+  
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+  
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+  /* CSS untuk mengatur lebar kolom */
+  /* Misalnya, Anda ingin lebar kolom waktu_pengambilan_data lebih kecil */
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 100%;
+  }
+  
+  /* Misalnya, Anda ingin lebar kolom judul lebih besar */
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 50%;
+  }
+  
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: 15%;
+  }
+  
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 15%;
+  }
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.site-footer .bottom-footer {
+    text-align: center;
+}
+
+.site-footer .bottom-footer p {
+    margin-bottom: 5px;
+}
+
+.site-footer .bottom-footer .name {
+    font-weight: bold;
+}
