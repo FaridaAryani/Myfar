@@ -35,56 +35,53 @@ body, ul, li {
     text-decoration: underline; /* Menambahkan garis bawah pada link saat di-hover */
 }
 
+/* CSS untuk gaya tabel */
 table {
     width: 100%;
-    border-collapse:collapse;
+    border-collapse: collapse;
     margin-bottom: 20px;
-    font-size: 16px;
 }
-
+  
 table, th, td {
     border: 1px solid #ddd;
 }
 
 th, td {
-    padding: 12px;
-    text-align: center;
+    padding: 100px;
+    text-align: left;
 }
-
+  
 th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
-
+  
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
 /* CSS untuk mengatur lebar kolom */
+/* Misalnya, Anda ingin lebar kolom waktu_pengambilan_data lebih kecil */
 th:nth-child(1),
 td:nth-child(1) {
-    width: 5%;
+  width: 100%;
 }
-
+  
+/* Misalnya, Anda ingin lebar kolom judul lebih besar */
 th:nth-child(2),
 td:nth-child(2) {
-    width: 35%;
+  width: 50%;
 }
-
+ 
 th:nth-child(3),
 td:nth-child(3) {
-    width: 20%;
+  width: 15%;
 }
-
+  
 th:nth-child(4),
 td:nth-child(4) {
-    width: 20%;
-}
-
-th:nth-child(5),
-td:nth-child(5) {
-    width: 20%;
-}
+  width: 15%;
+}  
 
 /* Konten Halaman Game */
 .content {

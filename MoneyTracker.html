@@ -8,6 +8,11 @@
     <!-- for icons  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4K2XFY83a3/d4W85l4kuEDyS5b0F7DslBO5Opd7MIOxuFeDk44UJjvoBzPf5ecU8j+Es0j+b+CKpw3LkBLGt8w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,18 +22,50 @@
     </nav>
 
     <section id="MoneyTracker" class="project">
-        <h2>Aplikasi MoneyTracker</h2>
-        <!-- Tugas Money Tracker akan ditampilkan di sini -->
-    </section>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <div class="content">
+                    <!-- Konten halaman game -->
+                    <button onclick="goBack()">Kembali</button>
+                </div>
+            </form>
+        </div>
 
-    <div class="content">
-        <!-- Konten halaman game -->
-        <button onclick="goBack()">Kembali</button>
-    </div>
+        <div id="postLoginContent" class="hidden">
+            <h2>Selamat Datang, <span id="userWelcome"></span>!</h2>
+            <div class="option">💸<br>Pengeluaran</div>
+            <div class="option">💸<br>Pemasukkan</div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </section>
 
     <script>
         function goBack() {
             window.location.href = 'Project.html';
+        }
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form submit default
+            var username = document.getElementById('username').value;
+
+            // Sederhana, anggap login berhasil
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('postLoginContent').classList.remove('hidden');
+            document.getElementById('userWelcome').innerText = username;
+        });
+
+        function logout() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('postLoginContent').classList.add('hidden');
         }
     </script>
 
@@ -42,6 +79,6 @@
                 </div>
             </div>
         </div>
-    </footer>   
+    </footer>
 </body>
 </html>
