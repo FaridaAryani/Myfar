@@ -69,6 +69,7 @@ class MangaSpider(scrapy.Spider):
                   }
         )
 
+
     def parse_characters(self, response):
         rank = response.meta['rank']
         title = response.meta['title']

@@ -1,23 +1,52 @@
-// Menambahkan event listener untuk form submit
-document.getElementById('projectForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah form dari pengiriman
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farida's Website</title>
+    <link rel="stylesheet" href="assets/css/prostyles.css">
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4K2XFY83a3/d4W85l4kuEDyS5b0F7DslBO5Opd7MIOxuFeDk44UJjvoBzPf5ecU8j+Es0j+b+CKpw3LkBLGt8w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/Image/aryni.png" width="80" height="80" alt="logo">
+        </div>
+    </nav>
 
-    const selectedProject = document.getElementById('project').value; // Mengambil nilai proyek yang dipilih dari dropdown
-    const projects = document.querySelectorAll('.project'); // Mengambil semua elemen dengan class 'project'
+    <section id="tic-tac-toe" class="project">
+        <div class="game-container">
+            <h2>Game Tic Tac Toe</h2>
+            <p>Masukkan nama anda: </p>
+            <input type="text" id="name-input" placeholder="Nama Anda">
+            <div id="board" class="board">
+                <div class="cell" data-cell>1</div>
+                <div class="cell" data-cell>2</div>
+                <div class="cell" data-cell>3</div>
+                <div class="cell" data-cell>4</div>
+                <div class="cell" data-cell>5</div>
+                <div class="cell" data-cell>6</div>
+                <div class="cell" data-cell>7</div>
+                <div class="cell" data-cell>8</div>
+                <div class="cell" data-cell>9</div>
+            </div>
+            <p id="result" class="result"></p>
+            <button id="restartButton" class="restart-button">Restart Game</button>
+        </div>
+    </section>
 
-    // Sembunyikan semua proyek
-    projects.forEach(project => {
-        project.style.display = 'none'; // Mengatur display menjadi 'none' untuk menyembunyikan elemen
-    });
+    <div class="content">
+        <!-- Konten halaman game -->
+        <button onclick="goBack()">Kembali</button>
+    </div>
 
-    // Tampilkan proyek yang dipilih
-    const selectedElement = document.getElementById(selectedProject); // Mengambil elemen proyek yang dipilih berdasarkan id
-    if (selectedElement) {
-        selectedElement.style.display = 'block'; // Mengatur display menjadi 'block' untuk menampilkan elemen
-    }
+    <script>
+        function goBack() {
+            window.location.href = 'Project.html';
+        }
 
-    // Jika proyek yang dipilih adalah Tic Tac Toe, buat papan permainan
-    if (selectedProject === 'tic-tac-toe') {
         // Mendefinisikan konstanta untuk kelas X, O dan kombinasi kemenangan
         const X_CLASS = 'x';
         const O_CLASS = 'o';
@@ -112,50 +141,18 @@ document.getElementById('projectForm').addEventListener('submit', function(event
                 });
             });
         }
+    </script>
 
-    } else if (selectedProject === 'scrap1'){
-        // Menggunakan jQuery untuk mengambil data dari file JSON dan menampilkan dalam bentuk tabel
-        $(function(){
-            $.get('assets/Scraping/Scrap1/DataScrapping.json', function(obj) {
-                var str = "<table border=1>"; // Membuat string awal untuk tabel
-                str += "<tr><th>No</th><th>Judul</th><th>Kategori</th><th>Waktu Publikasi</th><th>Waktu Pengambilan</th></tr>"; // Menambahkan header tabel
-                $.each(obj, function(n, data) {
-                    str += "<tr><td>" + (n + 1) + "</td>"; // Menambahkan nomor urut
-                    str += "<td>" + data.judul + "</td>"; // Menambahkan judul
-                    str += "<td>" + data.kategori + "</td>"; // Menambahkan kategori
-                    str += "<td>" + data.waktu_publish + "</td>"; // Menambahkan waktu publikasi
-                    str += "<td>" + data.waktu_pengambilan + "</td></tr>"; // Menambahkan waktu pengambilan
-                });
-                str += "</table>"; // Menutup tag tabel
-                $('#table').html(str); // Menampilkan tabel di elemen dengan id 'table'
-            });
-        });
-    } else if (selectedProject === 'scrap2'){
-        // Menggunakan jQuery untuk mengambil data dari file JSON dan menampilkan dalam bentuk tabel
-        $(function(){
-            $.get('assets/Scraping/Scrap2/manga/hasil14.json', function(obj) {
-                var str = "<table border=1>"; // Membuat string awal untuk tabel
-                str += "<tr><th>Rank</th><th>Judul</th><th>Gambar</th><th>Popularitas</th><th>Score</th><th>genre</th><th>publish</th><th>author</th><th>status</th><th>synopsis</th><th>karakter</th></tr>"; // Menambahkan header tabel
-                $.each(obj, function(n, data) {
-                    str += "<tr><td>" + (n + 1) + "</td>"; // Menambahkan nomor urut
-                    str += "<td>" + data.rank + "</td>"; // Menambahkan judul
-                    str += "<td>" + data.title + "</td>"; // Menambahkan kategori
-                    str += "<td>" + data.img + "</td>"; // Menambahkan waktu publikasi
-                    str += "<td>" + data.popularity + "</td></tr>";
-                    str += "<td>" + data.score + "</td></tr>";
-                    str += "<td>" + data.genres_link + "</td></tr>";
-                    str += "<td>" + data.publish + "</td></tr>";
-                    str += "<td>" + data.author + "</td></tr>";
-                });
-                str += "</table>"; // Menutup tag tabel
-                $('#table').html(str); // Menampilkan tabel di elemen dengan id 'table'
-            });
-        });
-    } else if (selectedProject === 'scrap3'){
-        const table = document.getElementById('table'); // Implementasi untuk proyek scrap3
-    } else if (selectedProject === 'tree'){
-        const table = document.getElementById('table'); // Implementasi untuk proyek tree
-    } else if (selectedProject === 'MoneyTracker'){
-        const table = document.getElementById('table'); // Implementasi untuk Money Tracker
-    }
-});
+    <footer class="site-footer">
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Copyright &copy; 2024 <span class="name">TechnoMy.</span> All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>

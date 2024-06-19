@@ -14,28 +14,21 @@
         <div class="logo">
             <img src="assets/Image/aryni.png" width="80" height="80" alt="logo">
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Galery.html">My Galery</a></li>
-            <li><a href="Project.html">My Project</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
     </nav>
 
-    <div id="select">
-        <div class="selection-project">
-            <div class="option" onclick="pickOption('game.html')">🎮<br>Game</div>
-            <div class="option" onclick="pickOption('scrap1.html')">📊<br>scrap1</div>
-            <div class="option" onclick="pickOption('scrap2.html')">📊<br>scrap2</div>
-            <div class="option" onclick="pickOption('scrap3.html')">📊<br>scrap3</div>
-            <div class="option" onclick="pickOption('tree.html')">🌳<br>tree</div>
-            <div class="option" onclick="pickOption('MoneyTracker.html')">💰<br>MoneyTracker</div>
-        </div>
+    <section id="tree" class="project">
+        <h2>Representasi Pohon Keluarga Menggunakan Struktur Data Tree</h2>
+        <!-- Tugas Pohon keluarga akan ditampilkan di sini -->
+    </section>
+
+    <div class="content">
+        <!-- Konten halaman game -->
+        <button onclick="goBack()">Kembali</button>
     </div>
 
     <script>
-        function pickOption (file){
-            window.location.href = file;
+        function goBack() {
+            window.location.href = 'Project.html';
         }
     </script>
 
